@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            throwOnError : false
+            });
+        });
+    </script>
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="navbar__brand">Scientific Calculator</a> 
+    </header>
+
+    <main>
+        <div class="calc">
+            <section class="section--top">
+                
+            </section>
+
+            <section class="section--middle">
+                <input type="text" class="input">
+            </section>
+
+            <section class="section--bottom">
+                <div class="row--top">
+                    <div class="column--left">
+                        <button class="button--main">main</button>
+
+                        <button class="button--abc">abc</button>
+
+                        <button class="button--func">func</button>
+                    </div>
+
+                    <div class="column--middle"></div>
+
+                    <div class="column--right"></div>
+                </div>
+
+                <div class="row--bottom">
+                    <div class="main">
+                        <div class="main--left"></div>
+
+                        <div class="main--middle"></div>
+                            
+                        <div class="main--right"></div>
+                    </div>
+
+                    <div class="abc">
+                        <div class="abc--top"></div>
+
+                        <div class="abc--upper-middle"></div>
+
+                        <div class="abc--lower-middle"></div>
+
+                        <div class="abc--bottom"></div>
+                    </div>
+
+                    <div class="func">
+                        <div class="func--left"></div>
+
+                        <div class="func--right"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created by Fredj Kharroubi</p>
+        <div>
+            <span>Follow me on:</span>
+            <img src="./assets/icons/github.svg"></img>
+            <img src="./assets/icons/linkedin.svg"></img>
+        </div>
+    </footer>
+    <script defer src="js/eventListeners.js"></script>
+    <script defer src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+@import "mixins";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+}
+
+header {
+    background-color: black;
+    padding: .5rem 1rem;
+
+    .navbar__brand {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+main {
+    flex: 1;
+    @include flexbox(flex, column, center, center);
+
+    .calc {
+        display: grid;
+        grid-template-rows: 50% 10% 40%;
+        width: 600px;
+        height: 550px;
+        border: 1px solid gray;
+
+           
+        .section--top {
+        }
+
+        .section--middle {
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+
+            .input {
+                width: 100%;
+                height: 100%;
+                font-size: 1rem;
+                padding-left: 1.5rem;
+                
+            }
+        }
+
+        .section--bottom {
+            display: grid;
+            grid-template-rows: 20% 80%;
+
+            .row--top {
+                display: grid;
+                grid-template-columns: 30% 50% 20%;
+                border-bottom: 1px solid gray;
+
+                .column--left {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                    .button--main, .button--abc, .button--func {
+                        border: 0;
+                        margin: 5px;
+                        background-color: white;
+                        cursor: pointer;
+                        font-size: 1rem;
+
+                        &:hover {
+                            border-bottom: 3px solid black;
+                        }
+                    }
+                }
+
+                .column--middle {}
+
+                .column--right {}
+            }
+
+            .row--bottom {
+
+                .btn {
+                    border: 1px solid gray;
+                    border-radius: 5%;
+                    font-size: 1rem;
+                    margin: 2px;
+                }
+
+                .main {
+                    display: grid;
+                    grid-template-columns: 30% 50% 20%;
+                    height: 100%;
+                    width: 100%;
+                    .main--left {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                        padding: 5px;
+                    }
+
+                    .main--middle {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                        padding: 5px;
+                    }
+
+                    .main--right {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                        padding: 5px;
+                    }
+                }
+
+                .abc {
+                    display: none;
+                    grid-template-rows: repeat(4, 1fr);
+                    height: 100%;
+                    width: 100%;
+                    padding: 2.5px;
+
+                    .abc--top {
+                        display: grid;
+                        grid-template-columns: repeat(10, 1fr);
+                        padding: 2.5px;
+                    }
+
+                    .abc--upper-middle {
+                        display: grid;
+                        grid-template-columns: repeat(9, 1fr);
+                        padding: 2.5px;
+                    }
+
+                    .abc--lower-middle {
+                        display: grid;
+                        grid-template-columns: repeat(10, 1fr);
+                        padding: 2.5px;
+                    }
+
+                    .abc--bottom {
+                        display: grid;
+                        grid-template-columns: repeat(9, 1fr);
+                        padding: 2.5px;
+                    }
+                }
+
+                .func {
+                    display: none;
+                    grid-template-columns: 1fr 1fr;
+                    height: 100%;
+                    width: 100%;
+
+                    .func--left {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                        padding : 5px;
+                    }
+
+                    .func--right {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(4, 1fr);
+                        padding : 5px;
+                    }
+
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+footer {
+    @include flexbox(flex, row, space-between, center);
+    padding: .5rem 1rem;
+    background-color: black;
+    color: white;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 200px;
+        img {
+            width: 25px;
+            height: 25px;
+            filter: invert(1);
+        }
+    }
+
+}
