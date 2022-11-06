@@ -25,7 +25,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="navbar__brand">Scientific Calculator</a> 
+        <a href="#" class="navbar__brand">ultra<span>math</span></a> 
     </header>
 
     <main>
@@ -35,13 +35,13 @@
             </section>
 
             <section class="section--middle">
-                <input type="text" class="input">
+                <input type="text" class="input" autofocus>
             </section>
 
             <section class="section--bottom">
                 <div class="row--top">
                     <div class="column--left">
-                        <button class="button--main">main</button>
+                        <button class="button--main current">main</button>
 
                         <button class="button--abc">abc</button>
 
@@ -83,14 +83,20 @@
     </main>
 
     <footer>
-        <p>Created by Fredj Kharroubi</p>
+        <p>Created by <span>Fredj</span> Kharroubi</p>
         <div>
             <span>Follow me on:</span>
-            <img src="./assets/icons/github.svg"></img>
-            <img src="./assets/icons/linkedin.svg"></img>
+            <a href="https://github.com/fredjkhar" target="_blank">
+                <img src="./assets/icons/github.svg">
+            </a>
+
+            <a href="https://www.linkedin.com/in/fredj-kharroubi/" target="_blank">
+                <img src="./assets/icons/linkedin.svg">
+            </a>
         </div>
     </footer>
-    <script defer src="js/eventListeners.js"></script>
+    <script defer src="js/buttons.js"></script>
+    <script defer src="js/listeners.js"></script>
     <script defer src="js/index.js"></script>
 </body>
 </html>
