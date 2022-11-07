@@ -49,16 +49,23 @@ main {
             border-top: 1px solid lightgray;
             border-bottom: 1px solid lightgray;
 
-            .input {
+            .math-field {
+                display: inline-block;
                 width: 100%;
                 height: 100%;
                 font-size: 1rem;
-                padding-left: 1.5rem;
+                padding: 1rem 1.5rem 1rem 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                
 
                 &:focus {
                     outline: none;
-                    border: 1px solid green;
-                }
+                    border: 1px solid #008000;
+                }  
+            }
+
+            .superscript {
                 
             }
         }
