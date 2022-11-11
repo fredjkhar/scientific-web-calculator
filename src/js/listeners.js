@@ -1,15 +1,14 @@
 
 /* row--top buttons */
 const buttons = [
-    document.getElementsByClassName('button--main')[0],
-    document.getElementsByClassName('button--abc')[0],
-    document.getElementsByClassName('button--func')[0]
+    document.querySelector('.button--main'),
+    document.querySelector('.button--abc'),
+    document.querySelector('.button--func')
 ]
-
 const sections = [
-    document.getElementsByClassName('main')[0],
-    document.getElementsByClassName('abc')[0],
-    document.getElementsByClassName('func')[0]
+    document.querySelector('.main'),
+    document.querySelector('.abc'),
+    document.querySelector('.func')
 ]
 
 for (let button of buttons) {
@@ -46,146 +45,55 @@ for (let button of buttons) {
     })
 }
 
-/* main--left buttons */
-document.querySelector('.main--left :nth-child(1)').addEventListener('click', () => {
-    pow_two()
-})
+const main_section = [
+    document.querySelector('.main--left'),
+    document.querySelector('.main--middle'),
+    document.querySelector('.main--right')
+]
 
-document.querySelector('.main--left :nth-child(2)').addEventListener('click', () => {
+for (let i = 0; i < main_buttons.length; i++) {
+    for (let button of main_buttons[i]) {
+        let btn = document.createElement('button')
+        btn.setAttribute('class', 'btn btn--main ' + button.op)
+        if (button.op === 'delete') btn.innerHTML = button.str
+        else btn.innerText = button.str
+        btn.addEventListener('click', () => { process(button.str, button.op) })
+        main_section[i].appendChild(btn)
+    }
+}
 
-})
+const abc_section = [
+    document.querySelector('.abc--top'),
+    document.querySelector('.abc--upper-middle'),
+    document.querySelector('.abc--lower-middle'),
+    document.querySelector('.abc--bottom')
+]
 
-document.querySelector('.main--left :nth-child(3)').addEventListener('click', () => {
+for (let i = 0; i < abc_buttons.length; i++) {
+    for (let button of abc_buttons[i]) {
+        let btn = document.createElement('button')
+        if (button === 'icon') btn.innerHTML = '<img src="./assets/icons/delete.svg" alt="delete one character">'
+        else btn.innerText = '$\\rm ' + button + '$'
+        btn.setAttribute('class', 'btn btn--abc')
+        btn.addEventListener('click', process())
+        abc_section[i].appendChild(btn)
+    }
+}
 
-})
+const func_section = [
+    document.querySelector('.func--left'),
+    document.querySelector('.func--right')
+]
 
-document.querySelector('.main--left :nth-child(4)').addEventListener('click', () => {
+for (let i = 0; i < func_buttons.length; i++) {
+    for (let button of func_buttons[i]) {
+        let btn = document.createElement('button')
+        if (button === 'icon') btn.innerHTML = '<img src="./assets/icons/delete.svg" alt="delete one character">'
+        else btn.innerText = '$\\rm ' + button + '$'
+        btn.setAttribute('class', 'btn btn--func')
+        btn.addEventListener('click', process())
+        func_section[i].appendChild(btn)
+    }
+}
 
-})
-
-document.querySelector('.main--left :nth-child(5)').addEventListener('click', () => {
-
-})
-
-document.querySelector('.main--left :nth-child(6)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--left :nth-child(7)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--left :nth-child(8)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--left :nth-child(9)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--left :nth-child(10)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--left :nth-child(11)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--left :nth-child(11)').addEventListener('click', () => {
-   
-})
-
-/* main--middle buttons */
-document.querySelector('.main--middle :nth-child(1)').addEventListener('click', () => {
-    digit(7)
-})
-
-document.querySelector('.main--middle :nth-child(2)').addEventListener('click', () => {
-    digit(8)
-})
-
-document.querySelector('.main--middle :nth-child(3)').addEventListener('click', () => {
-    digit(9)
-})
-
-document.querySelector('.main--middle :nth-child(4)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--middle :nth-child(5)').addEventListener('click', () => {
-    digit(4)
-})
-
-document.querySelector('.main--middle :nth-child(6)').addEventListener('click', () => {
-    digit(5)
-})
-
-document.querySelector('.main--middle :nth-child(7)').addEventListener('click', () => {
-    digit(6)
-})
-
-document.querySelector('.main--middle :nth-child(8)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--middle :nth-child(9)').addEventListener('click', () => {
-    digit(1)
-})
-
-document.querySelector('.main--middle :nth-child(10)').addEventListener('click', () => {
-    digit(2)
-})
-
-document.querySelector('.main--middle :nth-child(11)').addEventListener('click', () => {
-    digit(3)
-})
-
-document.querySelector('.main--middle :nth-child(12)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--middle :nth-child(13)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--middle :nth-child(14)').addEventListener('click', () => {
-    digit(0)
-})
-
-document.querySelector('.main--middle :nth-child(15)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--middle :nth-child(16)').addEventListener('click', () => {
-   
-})
-
-/* main--right buttons */
-document.querySelector('.main--right :nth-child(1)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--right :nth-child(2)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--right :nth-child(3)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--right :nth-child(4)').addEventListener('click', () => {
-   
-})
-
-document.querySelector('.main--right :nth-child(5)').addEventListener('click', () => {
-   delete_last_element()
-})
-
-document.querySelector('.main--right :nth-child(6)').addEventListener('click', () => {
-   
-})
-
-
-
-
-
+    
