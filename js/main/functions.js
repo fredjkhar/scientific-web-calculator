@@ -1,7 +1,8 @@
-let equation = []
-let math_field = document.querySelector('.math-field')
 
-function process(str = '', operation) {
+
+let sup = false
+/*
+function process(str, operation) {
     if (operation !== undefined) {
         switch (operation) {
             case 'pow2':
@@ -66,27 +67,17 @@ function pow_two() {
         default_operation('2', 'digit')
     } else {
         superscript(2)
-        rebuild_equation()
     }
 }
 
 function pow_n() {
-    /*
     if (equation.length != 0) {
-        let last_element = equation[equation.length - 1]
-        if (last_element.className === "digit") {
-            if (waiting_ops.length == 0) {
-                waiting_ops.push(pow_n)
-                rebuild_equation()   
-            }
-        }
+        sup = true
     }
-    */
-
 }
 
 function abs() {
-    default_operation('|', 'tan') 
+    default_operation('|', 'abs') 
 }
 
 function sqrt() {}
@@ -94,15 +85,15 @@ function sqrt() {}
 function nrt() {}
 
 function pi() {
-    default_operation('𝜋', 'tan') 
+    default_operation('𝜋', 'pi') 
 }
 
 function sin() {
-    default_operation('sin(', 'tan') 
+    default_operation('sin(', 'sin') 
 }
 
 function cos() {
-    default_operation('cos(', 'tan') 
+    default_operation('cos(', 'cos') 
 }
 
 function tan() {
@@ -124,11 +115,11 @@ function delete_last_el() {
     rebuild_equation()
 }
 
-function default_operation(str, operation) {
-    let e = document.createElement('span')
-    e.setAttribute('class', operation)
+function default_operation(str, op) {
+    let type = sup ? 'sup' : 'span'
+    let e = document.createElement(type)
+    e.setAttribute('class', op + (type === 'sup' ? ' superscript' : ''))
     e.innerText = str
-
     equation.push(e)
     rebuild_equation()
 }
@@ -141,12 +132,31 @@ function rebuild_equation() {
     }
 }
 
-function superscript(n = 2) {
-    let pow_superscript = document.createElement('span')
-    pow_superscript.setAttribute('class', 'superscript')
-    pow_superscript.innerText = n
-    equation.push(pow_superscript)
+function superscript(n = 2, op) {
+    let s = document.createElement('sup')
+    s.setAttribute('class', 'superscript' + (typeof(op) === 'undefined' ? '' : ' ' + op)) 
+    s.innerText = n
+    equation.push(s)
+    rebuild_equation()
 }
+*/
+/*
+function focused(cond) {
+    let bar = document.querySelector('.vertical-bar')
+    console.log(bar)
+    if (!cond && typeof(bar) !== 'null') {
+        const i = equation.indexOf(bar)
+        equation.splice(i,1)
+        rebuild_equation()
+    } else if (typeof(bar) === 'null') {
+        bar = document.createElement('span')
+        bar.setAttribute('class','vertical-bar')
+        equation.push(bar)
+        rebuild_equation()
+    }
+
+}
+*/
 
 
 

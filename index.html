@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/calculator_preview_rev_1.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <title>Mathlab</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="navbar__brand">math<span>lab</span></a> 
+    </header>
+
+    <main>
+        <div class="calc">
+            <section class="section--top">
+                
+            </section>
+
+            <section class="section--middle">
+                <span class="math-field"></span>
+            </section>
+
+            <section class="section--bottom">
+                <div class="row--top">
+                    <div class="column--left">
+                        <button class="button--main current">main</button>
+
+                        <button class="button--abc">abc</button>
+
+                        <button class="button--func">func</button>
+                    </div>
+
+                    <div class="column--middle"></div>
+
+                    <div class="column--right"></div>
+                </div>
+
+                <div class="row--bottom">
+                    <div class="main">
+                        <div class="main--left">
+                            <button class="btn pow2">$a^2$</button>
+                            <button class="btn pown">$a^b$</button>
+                            <button class="btn abs">$|a|$</button>
+                            <button class="btn sqrt">$\sqrt{}$</button>
+                            <button class="btn nqrt">$\sqrt[n]{}$</button>
+                            <button class="btn pi">$\pi$</button>
+                            <button class="btn sin">$\sin$</button>
+                            <button class="btn cos">$\cos$</button>
+                            <button class="btn tan">$\tan$</button>
+                            <button class="btn open-par">$($</button>
+                            <button class="btn close-par ">$)$</button>
+                            <button class="btn comma">$,$</button>
+                        </div>
+
+                        <div class="main--middle">
+                            <button class="btn digit-7">$7$</button>
+                            <button class="btn digit-8">$8$</button>
+                            <button class="btn digit-9">$9$</button>
+                            <button class="btn div">$\div$</button>
+                            <button class="btn digit-4">$4$</button>
+                            <button class="btn digit-5">$5$</button>
+                            <button class="btn digit-6">$6$</button>
+                            <button class="btn times">$\times$</button>
+                            <button class="btn digit-1">$1$</button>
+                            <button class="btn digit-2">$2$</button>
+                            <button class="btn digit-3">$3$</button>
+                            <button class="btn minus">$-$</button>
+                            <button class="btn dot">$.$</button>
+                            <button class="btn digit-0">$0$</button>
+                            <button class="btn answer">$ans$</button>
+                            <button class="btn plus">$+$</button>
+
+                        </div>
+                            
+                        <div class="main--right">
+                            <button class="btn">$mod$</button>
+                            <button class="btn">$\frac{a}{b}$</button>
+                            <button class="btn">$\leftarrow$</button>
+                            <button class="btn">$\rightarrow$</button>
+                            <button class="btn">
+                                <img src="./assets/icons/delete.svg" alt="delete char">
+                            </button>
+                            <button class="btn">$\hookleftarrow$</button>
+                        </div>
+                    </div>
+
+                    <div class="abc">
+                        <div class="abc--top"></div>
+
+                        <div class="abc--upper-middle"></div>
+
+                        <div class="abc--lower-middle"></div>
+
+                        <div class="abc--bottom"></div>
+                    </div>
+
+                    <div class="func">
+                        <div class="func--left"></div>
+
+                        <div class="func--right"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created by <span>Fredj</span> Kharroubi</p>
+        <div>
+            <span>Follow me on:</span>
+            <a href="https://github.com/fredjkhar" target="_blank">
+                <img src="./assets/icons/github.svg">
+            </a>
+
+            <a href="https://www.linkedin.com/in/fredj-kharroubi/" target="_blank">
+                <img src="./assets/icons/linkedin.svg">
+            </a>
+        </div>
+    </footer>
+    <script defer src="js/helpers/equation.js"></script>
+    <script defer src="js/helpers/focus.js"></script>
+    <script defer src="js/helpers/functions.js"></script>
+    <script defer src="js/helpers/listeners.js"></script>
+
+    <script defer src="js/main/listeners.js"></script>
+    <script defer src="js/main/functions.js"></script>
+
+</body>
+</html>
