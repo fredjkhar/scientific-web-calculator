@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+
     <title>Mathlab</title>
 </head>
 <body>
@@ -80,11 +80,11 @@
                         </div>
                             
                         <div class="main--right">
-                            <button class="btn">$mod$</button>
-                            <button class="btn">$\frac{a}{b}$</button>
-                            <button class="btn">$\leftarrow$</button>
-                            <button class="btn">$\rightarrow$</button>
-                            <button class="btn">
+                            <button class="btn mod">$mod$</button>
+                            <button class="btn frac">$\frac{a}{b}$</button>
+                            <button class="btn left-arr">$\leftarrow$</button>
+                            <button class="btn right-arr">$\rightarrow$</button>
+                            <button class="btn delete">
                                 <img src="./assets/icons/delete.svg" alt="delete char">
                             </button>
                             <button class="btn">$\hookleftarrow$</button>
@@ -125,6 +125,7 @@
         </div>
     </footer>
     <script defer src="js/helpers/equation.js"></script>
+    <script defer src="js/index.js"></script>
     <script defer src="js/helpers/focus.js"></script>
     <script defer src="js/helpers/functions.js"></script>
     <script defer src="js/helpers/listeners.js"></script>

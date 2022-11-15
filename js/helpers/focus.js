@@ -21,7 +21,6 @@ function focus() {
         eq.push(construct_bar())
         rebuild()
     }
-    else throw new Error('Already focused')
 }
 
 function unfocus() {

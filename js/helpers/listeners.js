@@ -43,6 +43,31 @@ for (let button of buttons) {
     })
 }
 
+document.addEventListener('click', (event) => {
+    if (math_field.contains(event.target) && event.target.id !== null) {
+        let i = eq.indexOf(event.target)
+        if (i > -1) {
+            if (!focused) {
+                focus()
+                eq.add(eq.pop(), i + 1)
+                rebuild()
+            } else {
+                let bar = document.querySelector('.bar')
+                if (i < eq.indexOf(bar)) {
+                    eq.remove(bar)
+                    eq.add(bar, i + 1)
+                } else {
+                    eq.remove(bar)
+                    eq.add(bar, i)
+                }
+                rebuild()
+            }
+        }
+    }
+})
+
+
+
 
 
 

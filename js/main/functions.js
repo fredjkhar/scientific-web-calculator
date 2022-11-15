@@ -1,7 +1,8 @@
 
 
-let sup = false
+
 /*
+let sup = false
 function process(str, operation) {
     if (operation !== undefined) {
         switch (operation) {
